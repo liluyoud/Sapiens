@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sapiens.App", "Sapiens.App\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sapiens.Mobile", "Sapiens.Mobile\Sapiens.Mobile.csproj", "{F1B064C7-74B2-4F7A-8BFF-B8BD31FE13CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sapiens.Web", "Sapiens.Web\Sapiens.Web.csproj", "{F95E9E18-FFE0-42A8-ABB5-0B47794EDC32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{F1B064C7-74B2-4F7A-8BFF-B8BD31FE13CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1B064C7-74B2-4F7A-8BFF-B8BD31FE13CD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F1B064C7-74B2-4F7A-8BFF-B8BD31FE13CD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F95E9E18-FFE0-42A8-ABB5-0B47794EDC32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F95E9E18-FFE0-42A8-ABB5-0B47794EDC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F95E9E18-FFE0-42A8-ABB5-0B47794EDC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F95E9E18-FFE0-42A8-ABB5-0B47794EDC32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
