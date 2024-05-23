@@ -9,4 +9,6 @@ public class Disciplina
     public required string Nome { get; set; }
 
     public TipoDisciplina Tipo { get; set; }
+
+    public string? Curso { get; set; }
 }
