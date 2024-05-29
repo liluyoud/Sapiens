@@ -2,21 +2,41 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Sapiens.Shared.Entities.Pessoa">
     <Position X="0.5" Y="1.75" Width="1.5" />
+    <AssociationLine Name="CorOuRaca" Type="Sapiens.Shared.Enums.CorOuRaca" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="4.699" />
+        <Point X="2.375" Y="4.699" />
+        <Point X="2.375" Y="5.281" />
+        <Point X="3" Y="5.281" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Sexo" Type="Sapiens.Shared.Enums.Sexo" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.625" Y="4.969" />
+        <Point X="1.625" Y="6.031" />
+        <Point X="3" Y="6.031" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="TipoSanguinio" Type="Sapiens.Shared.Enums.TipoSanguinio" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.188" Y="4.969" />
+        <Point X="1.188" Y="6.781" />
+        <Point X="3" Y="6.781" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAIAgCAQYAAAgAAAAAAAAAAAACAAAABAQAWQEAA=</HashCode>
       <FileName>Entities\Pessoa.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EstadoCivil" />
+      <Property Name="CorOuRaca" />
+      <Property Name="Sexo" />
+      <Property Name="TipoSanguinio" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Sapiens.Shared.Entities.Funcionario" Collapsed="true">
     <Position X="2.75" Y="2.75" Width="1.5" />
-    <InheritanceLine Type="Sapiens.Shared.Entities.Pessoa" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="2" Y="3.965" />
-        <Point X="2.375" Y="3.965" />
-        <Point X="2.375" Y="3.062" />
-        <Point X="2.75" Y="3.062" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAEAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Funcionario.cs</FileName>
@@ -24,12 +44,12 @@
   </Class>
   <Class Name="Sapiens.Shared.Entities.Aluno" Collapsed="true">
     <Position X="2.75" Y="0.75" Width="1.5" />
-    <InheritanceLine Type="Sapiens.Shared.Entities.Pessoa" FixedFromPoint="true" FixedToPoint="true">
+    <InheritanceLine Type="Sapiens.Shared.Entities.Pessoa" FixedFromPoint="true">
       <Path>
-        <Point X="2" Y="3.965" />
-        <Point X="2.375" Y="3.965" />
-        <Point X="2.375" Y="1.125" />
-        <Point X="2.75" Y="1.125" />
+        <Point X="2" Y="2.608" />
+        <Point X="2.375" Y="2.608" />
+        <Point X="2.375" Y="1.096" />
+        <Point X="2.75" Y="1.096" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -51,5 +71,51 @@
       <FileName>Entities\Coordenador.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Sapiens.Shared.Entities.Curso">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Coordenador" Type="Sapiens.Shared.Entities.Coordenador">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.375" Y="0.092" Height="0.182" Width="1.307" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAABAAAAAAAAAQAAAAAEAAAQ=</HashCode>
+      <FileName>Entities\Curso.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Coordenador" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Sapiens.Shared.Enums.EstadoCivil" Collapsed="true">
+    <Position X="3" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAAAAAAAAAAAAAAgAAAAAgAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Enums\EstadoCivil.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sapiens.Shared.Enums.CorOuRaca" Collapsed="true">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQAAAAAAABAAA=</HashCode>
+      <FileName>Enums\CorOuRaca.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sapiens.Shared.Enums.Sexo" Collapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\Sexo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sapiens.Shared.Enums.TipoSanguinio" Collapsed="true">
+    <Position X="3" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAIAAAAgAAAAAABAAAAAQAAAACAAAAAAIAEAAA=</HashCode>
+      <FileName>Enums\TipoSanguinio.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Sapiens.Shared.Entities;
 
-public class Pessoa
+public abstract class Pessoa
 {
     [StringLength(255)]
     public string? Nome { get; set; }
@@ -27,7 +27,7 @@ public class Pessoa
     public bool? PCD { get; set; }
 
     [StringLength(5)]
-    public string? TipoSanguinio { get; set; }
+    public TipoSanguinio? TipoSanguinio { get; set; }
 
     [StringLength(100)]
     public string? LinkedIn { get; set; }

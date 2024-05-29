@@ -12,6 +12,8 @@ public class Curso
 
     public TipoCurso Tipo { get; set; }
 
+    public Coordenador? Coordenador { get; set; }
+
     public override string ToString()
     {
         return Nome ?? "";

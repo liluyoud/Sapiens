@@ -11,4 +11,6 @@ public class Disciplina
     public TipoDisciplina Tipo { get; set; }
 
     public string? Curso { get; set; }
+
+    public string? Professor { get; set; }
 }
