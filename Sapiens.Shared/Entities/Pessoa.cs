@@ -1,10 +1,11 @@
-﻿using Sapiens.Shared.Enums;
+﻿using Sapiens.Shared.Contexts;
+using Sapiens.Shared.Enums;
 using Sapiens.Shared.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace Sapiens.Shared.Entities;
 
-public abstract class Pessoa
+public abstract class Pessoa : Entidade
 {
     [StringLength(255)]
     public string? Nome { get; set; }
@@ -43,4 +44,5 @@ public abstract class Pessoa
 
     [StringLength(100)]
     public string? TikTok { get; set; }
+
 }

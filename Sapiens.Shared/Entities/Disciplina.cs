@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Sapiens.Shared.Entities;
 
-public class Disciplina
+public class Disciplina : Entidade
 {
     [StringLength(100)]
-    public required string Nome { get; set; }
+    public string? Nome { get; set; }
 
     public TipoDisciplina Tipo { get; set; }
 
-    public string? Curso { get; set; }
+    public Curso? Curso { get; set; }
 
-    public string? Professor { get; set; }
+    public Professor? Professor { get; set; }
 }

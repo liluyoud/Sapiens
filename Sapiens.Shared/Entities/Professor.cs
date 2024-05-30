@@ -6,4 +6,5 @@ public class Professor : Funcionario
 {
     public Titulacao? Titulacao { get; set; }
     public string? Formacao { get; set; }
+    public bool ECoordenador { get; set; }
 }

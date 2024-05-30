@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Sapiens.Shared.Entities;
 
-public class Curso
+public class Curso : Entidade
 {
     [StringLength(100)]
     public string? Nome { get; set; }
@@ -12,10 +12,13 @@ public class Curso
 
     public TipoCurso Tipo { get; set; }
 
-    public Coordenador? Coordenador { get; set; }
+    public Professor? Coordenador { get; set; }
 
     public override string ToString()
     {
         return Nome ?? "";
     }
+
+    public List<Disciplina> Disciplinas =>
+        Context!.Disciplinas.Where(d => d.Curso!.Equals(this)).ToList();
 }
