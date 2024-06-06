@@ -3,25 +3,32 @@ using Sapiens.Shared.Contexts;
 using Sapiens.Shared.Entities;
 
 var context = new SapiensContext();
-context.Database.Migrate();
 
-var lilo = new Professor();
-lilo.Nome = "Liluyoud Cury de Lacerda";
-lilo.Cpf = "111.111.111-11";
+FazerMigracao();
 
-var alan = new Professor();
-alan.Nome = "Allan Gurgel";
-alan.Cpf = "222.222.222-22";
+CriarTitulo("Sapiens - Sistema Acadêmico");
 
-var curso = new Curso();
-curso.Nome = "Sistemas de Informação";
-curso.CargaHoraria = 3200;
-curso.Coordenador = alan;
+void FazerMigracao()
+{
+    Console.WriteLine("Iniciando migração");
+    context.Database.Migrate();
+    Console.WriteLine("Migração Finalizada");
+    Console.WriteLine("[Enter] para continuar");
+    Console.ReadLine();
+}
 
-context.Add(lilo);
-context.Add(alan);
-context.Add(curso);
+void CriarTitulo(string titulo)
+{
+    Console.Clear();
+    Console.WriteLine("-----------------------------------");
+    Console.WriteLine($" {titulo}");
+    Console.WriteLine("-----------------------------------");
+}
 
-context.SaveChanges();
+void AdicionaAluno()
+{
+    CriarTitulo("Sapiens - Adicionar Aluno");
+    Console.WriteLine("[Enter] para continuar");
+    Console.ReadLine();
 
-Console.ReadLine();
+}
