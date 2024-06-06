@@ -19,6 +19,6 @@ public class Curso : Entidade
         return Nome ?? "";
     }
 
-    public List<Disciplina> Disciplinas =>
-        Context!.Disciplinas.Where(d => d.Curso!.Equals(this)).ToList();
+    public List<Disciplina> Disciplinas { get; } = new();
+        
 }

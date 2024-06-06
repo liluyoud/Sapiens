@@ -1,10 +1,12 @@
-﻿using Sapiens.Shared.Contexts;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Sapiens.Shared.Entities;
 
 public abstract class Entidade
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
-    public SapiensContext? Context { get; set; }
+    [Key]
+    public int Id { get; set; }
+
+    public DateTime DataCadastro { get; set; } = DateTime.UtcNow;
 
 }

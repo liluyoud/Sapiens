@@ -1,43 +1,26 @@
-﻿using Sapiens.Shared.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Sapiens.Shared.Entities;
+using System.Globalization;
 
 namespace Sapiens.Shared.Contexts;
 
-public class SapiensContext
+public class SapiensContext : DbContext
 {
-    public List<Curso> Cursos { get; set; }
-    public List<Professor> Professores { get; set; }
-    public List<Disciplina> Disciplinas { get; set; }
-    public List<Aluno> Alunos { get; set; }
+    public DbSet<Curso> Cursos { get; set; }
+    public DbSet<Professor> Professores { get; set; }
+    public DbSet<Disciplina> Disciplinas { get; set; }
+    public DbSet<Aluno> Alunos { get; set; }
+    public DbSet<Matricula> Matriculas { get; set; }
+
+    private string caminhoDb;
 
     public SapiensContext()
     {
-        Cursos = new();
-        Professores = new();
-        Disciplinas = new();
-        Alunos = new();
+        var folder = Environment.SpecialFolder.MyDocuments;
+        var path = Environment.GetFolderPath(folder);
+        caminhoDb = Path.Join(path, "sapiens.db");
     }
 
-    public void AdicionaCurso(Curso curso)
-    {
-        curso.Context = this;
-        Cursos.Add(curso);
-    }
-
-    public void AdicionaProfessor(Professor professor)
-    {
-        professor.Context = this;
-        Professores.Add(professor);
-    }
-
-    public void AdicionaDisciplina(Disciplina disciplina)
-    {
-        disciplina.Context = this;
-        Disciplinas.Add(disciplina);
-    }
-
-    public void AdicionaAluno(Aluno aluno)
-    {
-        aluno.Context = this;
-        Alunos.Add(aluno);
-    }
+    protected override void OnConfiguring(DbContextOptionsBuilder options)
+       => options.UseSqlite($"Data Source={caminhoDb}");
 }

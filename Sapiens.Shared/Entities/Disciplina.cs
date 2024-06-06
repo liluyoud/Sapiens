@@ -10,7 +10,11 @@ public class Disciplina : Entidade
 
     public TipoDisciplina Tipo { get; set; }
 
+    public  int? CursoId { get; set; }
     public Curso? Curso { get; set; }
 
+    public int? ProfessorId { get; set; }
     public Professor? Professor { get; set; }
+
+    public List<Matricula> Matriculas { get; } = new();
 }
