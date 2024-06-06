@@ -6,7 +6,7 @@ namespace Sapiens.Shared.Entities;
 public class Curso : Entidade
 {
     [StringLength(100)]
-    public string? Nome { get; set; }
+    public required string Nome { get; set; }
 
     public int? CargaHoraria { get; set; }
 
@@ -16,7 +16,12 @@ public class Curso : Entidade
 
     public override string ToString()
     {
-        return Nome ?? "";
+        var curso = Nome;
+        if (Coordenador != null)
+            curso += $" - {Coordenador.Nome}";
+        if (CargaHoraria != null && CargaHoraria > 0)
+            curso += $" - {CargaHoraria}h";
+        return curso;
     }
 
     public List<Disciplina> Disciplinas { get; } = new();

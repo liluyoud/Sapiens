@@ -6,12 +6,10 @@ namespace Sapiens.Shared.Entities;
 public abstract class Pessoa : Entidade
 {
     [StringLength(255)]
-    [Required]
-    public string? Nome { get; set; }
+    public required string Nome { get; set; }
 
     [StringLength(14)]
-    [Required]
-    public string? Cpf { get; set; }
+    public required string Cpf { get; set; }
 
     [StringLength(100)]
     public string? Email { get; set;}
