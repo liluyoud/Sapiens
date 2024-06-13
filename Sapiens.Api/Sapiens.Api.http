@@ -1,0 +1,6 @@
+@Sapiens.Api_HostAddress = http://localhost:5033
+
+GET {{Sapiens.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

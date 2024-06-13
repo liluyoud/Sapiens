@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sapiens.Shared", "Sapiens.S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sapiens.Console", "Sapiens.Console\Sapiens.Console.csproj", "{DC6CE14C-CE8D-4F21-B79E-7E454CF12B5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sapiens.Api", "Sapiens.Api\Sapiens.Api.csproj", "{FDB79276-5A67-4AF8-8257-A0B08A8816EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DC6CE14C-CE8D-4F21-B79E-7E454CF12B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC6CE14C-CE8D-4F21-B79E-7E454CF12B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC6CE14C-CE8D-4F21-B79E-7E454CF12B5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDB79276-5A67-4AF8-8257-A0B08A8816EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB79276-5A67-4AF8-8257-A0B08A8816EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB79276-5A67-4AF8-8257-A0B08A8816EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB79276-5A67-4AF8-8257-A0B08A8816EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
