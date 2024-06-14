@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Sapiens.Shared.Contexts;
 using Sapiens.Shared.Entities;
-using Sapiens.Shared.Enums;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,13 +10,14 @@ builder.Services.AddDbContext<SapiensContext>();
 
 var app = builder.Build();
 
-//if (app.Environment.IsDevelopment())
-//{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-//}
-
+app.UseSwagger();
+app.UseSwaggerUI();
 app.UseHttpsRedirection();
+
+app.MapGet("/migrate", (SapiensContext context) =>
+{
+    context.Database.Migrate();
+});
 
 app.MapGet("/cursos", (SapiensContext context) =>
 {
